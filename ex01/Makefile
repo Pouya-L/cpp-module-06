@@ -6,7 +6,7 @@
 #    By: plashkar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 19:22:04 by plashkar          #+#    #+#              #
-#    Updated: 2025/02/05 16:12:17 by plashkar         ###   ########.fr        #
+#    Updated: 2025/02/06 16:33:58 by plashkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC = c++
 STANDARD_FLAGS = -Wall -Werror -Wextra -std=c++98 -g
 
 SRC = \
-	 \
+	Serializer.cpp \
 	main.cpp \
 
 OBJ = $(SRC:.cpp=.o)
