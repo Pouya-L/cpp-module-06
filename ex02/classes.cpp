@@ -6,7 +6,7 @@
 /*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:49:56 by plashkar          #+#    #+#             */
-/*   Updated: 2025/02/06 18:12:28 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:27:30 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void identify(Base* p)
 		std::cout << "Uknown type!" << std::endl;
 }
 
+//catch (const std::bad_cast& e) but its in a library that is not allowed
 void identify(Base& p)
 {
 	try
@@ -55,21 +56,21 @@ void identify(Base& p)
 		std::cout << "Reference is an instance of class A" << std::endl;
 		return ;
 	}
-	catch (const std::bad_cast& e) {}
+	catch (std::exception &e) {}
 	try
 	{
 		dynamic_cast<B&>(p);
 		std::cout << "Reference is an instance of class B" << std::endl;
 		return ;
 	}
-	catch (const std::bad_cast& e) {}
+	catch (std::exception &e) {}
 	try
 	{
 		dynamic_cast<C&>(p);
 		std::cout << "Reference is an instance of class C" << std::endl;
 		return ;
 	}
-	catch (const std::bad_cast& e)
+	catch (std::exception &e)
 	{
 		throw std::invalid_argument("No class matches the Base reference.");
 	}
