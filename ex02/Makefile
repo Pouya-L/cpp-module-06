@@ -6,18 +6,18 @@
 #    By: plashkar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 19:22:04 by plashkar          #+#    #+#              #
-#    Updated: 2025/02/05 16:12:28 by plashkar         ###   ########.fr        #
+#    Updated: 2025/02/06 18:14:40 by plashkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex0
+NAME = ex02
 
 CC = c++
 
 STANDARD_FLAGS = -Wall -Werror -Wextra -std=c++98 -g
 
 SRC = \
-	 \
+	classes.cpp \
 	main.cpp \
 
 OBJ = $(SRC:.cpp=.o)
