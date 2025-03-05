@@ -2,13 +2,29 @@
 
 This repository contains exercises for the C++ Module 06, focusing on scalar conversion, pointer serialization, and polymorphism.
 
+## Casting in C++
+In C++, static_cast, dynamic_cast, and reinterpret_cast are different types of casting operators that serve different purposes. Here is a brief explanation of each:
+
+`static_cast`
++ Purpose: Performs a compile-time cast.
++ Usage: Used for conversions between related types, such as converting a pointer to a base class to a pointer to a derived class, or converting between numeric types.
++ Safety: It does not perform runtime checks, so it is not safe for downcasting (casting from a base class to a derived class) unless you are certain of the type.
+
+`dynamic_cast`
++ Purpose: Performs a runtime cast that includes type checking.
++ Usage: Used for safe downcasting in an inheritance hierarchy. It requires the base class to have at least one virtual function.
++ Safety: It performs runtime checks and returns nullptr if the cast is invalid (when casting pointers) or throws std::bad_cast (when casting references).
+
+`reinterpret_cast`
++ Purpose: Performs a low-level cast that reinterprets the bit pattern of the object.
++ Usage: Used for casting between unrelated types, such as converting a pointer to an integer or vice versa.
++ Safety: It is the most dangerous cast because it does not perform any type checking and can lead to undefined behavior if used incorrectly.
+
 ## Exercises
 
 ### **ex00: Scalar Converter**
 
 In this exercise, we implement a `ScalarConverter` utility that converts scalar values (like `int`, `float`, `double`, or `char`) between different types.
-
-
 
 **Key Concepts:**
 
