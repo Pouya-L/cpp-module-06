@@ -28,7 +28,7 @@ A scalar value is a single numerical value that represents a quantity, unlike ve
 | Can be processed in a single operation | Often require iteration for processing |
 
 **Example Usage:**
-
+compile and run the file with the 2nd argument being the string you want to convert
 ```
 ./convert "42"
 ./convert "4.2f"
