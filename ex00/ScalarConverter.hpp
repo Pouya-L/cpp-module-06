@@ -6,7 +6,7 @@
 /*   By: plashkar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:23:13 by plashkar          #+#    #+#             */
-/*   Updated: 2025/02/05 20:34:58 by plashkar         ###   ########.fr       */
+/*   Updated: 2025/03/05 20:08:57 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@
 
 # define DECIMAL_PRECISION 1
 
+/**
+ * The ScalarConverter class only has a private constructor and a static convert method.
+ * This design ensures that the class cannot be instantiated and
+ * that the convert method can be called directly on the class itself.
+ */
 class ScalarConverter {
 private:
 	ScalarConverter();
